@@ -17,7 +17,8 @@ const Login = () => {
         try {
             const response = await userLogin({ username, password });
             setResponse(response.message ?? 'Successful login');
-            router.push('/post');
+            // router.push('/post');
+            router.push('/atoms/sectionAtoms');
         } catch (error) {
             setLoading(false);
             const message = (error as Error).message;
